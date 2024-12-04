@@ -1,0 +1,14 @@
+D:\zMake\bin\Debug\net8.0\zMake.exe
+D:\zMake\bin\Debug\net8.0\zMake.deps.json
+D:\zMake\bin\Debug\net8.0\zMake.runtimeconfig.json
+D:\zMake\bin\Debug\net8.0\zMake.dll
+D:\zMake\bin\Debug\net8.0\zMake.pdb
+D:\zMake\obj\Debug\net8.0\zMake.GeneratedMSBuildEditorConfig.editorconfig
+D:\zMake\obj\Debug\net8.0\zMake.AssemblyInfoInputs.cache
+D:\zMake\obj\Debug\net8.0\zMake.AssemblyInfo.cs
+D:\zMake\obj\Debug\net8.0\zMake.csproj.CoreCompileInputs.cache
+D:\zMake\obj\Debug\net8.0\zMake.dll
+D:\zMake\obj\Debug\net8.0\refint\zMake.dll
+D:\zMake\obj\Debug\net8.0\zMake.pdb
+D:\zMake\obj\Debug\net8.0\zMake.genruntimeconfig.cache
+D:\zMake\obj\Debug\net8.0\ref\zMake.dll
