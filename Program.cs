@@ -44,7 +44,7 @@ public class Start
 
     public static bool addUnique(List<FileRecord> list, FileRecord newRecord)
     {
-        if(list.Any( (FileRecord item) => item.filePath == newRecord.filePath)) return false;
+        if (list.Any((FileRecord item) => item.filePath == newRecord.filePath)) return false;
         list.Add(newRecord);
         return true;
     }
@@ -57,18 +57,18 @@ public class Start
         List<FileRecord> visitedList = [];
         int depth = 0;
 
-        FileRecord main = new FileRecord{depth = depth, filePath = mainFile};
+        FileRecord main = new FileRecord { depth = depth, filePath = mainFile };
         list.Add(main);
 
-        while(list.Count != 0)
+        while (list.Count != 0)
         {
             int listSize = list.Count;
-            for(int i=0; i<listSize; i++)
+            for (int i = 0; i < listSize; i++)
             {
                 FileRecord fileRecord = list[list.Count - 1];
                 list.RemoveAt(list.Count - 1);
 
-                if(visitedList.Any((e) => e.filePath == fileRecord.filePath))
+                if (visitedList.Any((e) => e.filePath == fileRecord.filePath))
                 {
                     continue;
                 }
@@ -76,7 +76,7 @@ public class Start
                 addUnique(visitedList, fileRecord);
 
                 List<FileRecord> includes = getIncludes(fileRecord);
-                foreach(FileRecord record in includes)
+                foreach (FileRecord record in includes)
                 {
                     addUnique(list, record);
                 }
@@ -87,21 +87,21 @@ public class Start
         visitedList.Sort((a, b) => b.depth.CompareTo(a.depth));
         foreach (FileRecord record in visitedList) Console.WriteLine(record);
 
-        using(FileStream newFile = File.Open(root + "newFile.c", FileMode.OpenOrCreate, FileAccess.Write))
-        using(StreamWriter writer = new StreamWriter(newFile))
+        using (FileStream newFile = File.Open(root + "newFile.c", FileMode.OpenOrCreate, FileAccess.Write))
+        using (StreamWriter writer = new StreamWriter(newFile))
         {
-            foreach(FileRecord fileRecord in visitedList)
+            foreach (FileRecord fileRecord in visitedList)
             {
                 String[] fileContent = File.ReadLines(root + fileRecord.filePath).ToArray();
-                for(int i=0; i<fileContent.Length; i++)
+                for (int i = 0; i < fileContent.Length; i++)
                 {
 
-                    if(fileContent[i].StartsWith("##In"))
+                    if (fileContent[i].StartsWith("##In"))
                     {
                         fileContent[i] = "";
                     }
                 }
-                foreach(String line in fileContent)
+                foreach (String line in fileContent)
                 {
                     writer.WriteLine(line);
                 }

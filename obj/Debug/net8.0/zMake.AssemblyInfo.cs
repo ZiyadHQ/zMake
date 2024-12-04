@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("zMake")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7387b863c33e2b7cf384e37e1d89d2441bd3bae0")]
 [assembly: System.Reflection.AssemblyProductAttribute("zMake")]
 [assembly: System.Reflection.AssemblyTitleAttribute("zMake")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
